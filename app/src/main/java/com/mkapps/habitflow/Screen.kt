@@ -13,5 +13,5 @@ sealed class Screen(val route: String, val title: String, val icon: ImageVector)
     object Habits : Screen("habits", "Привычки", Icons.Default.Check)
     object Journal : Screen("journal", "Журнал", Icons.Default.Menu)
     object Analytics : Screen("analytics", "Аналитика", Icons.Default.AccountCircle)
-    object Coach : Screen("coach", "Коуч", Icons.Default.Face)
+    object AICoach : Screen("aicoach", "ИИКоуч", Icons.Default.Face)
 }

@@ -13,12 +13,14 @@ fun NavGraph(navController: NavHostController, modifier: Modifier = Modifier) {
         startDestination = Screen.Dashboard.route,
         modifier = modifier
     ) {
+        //bottom navigation items
         composable(Screen.Dashboard.route) { DashboardScreen(navController) }
         composable(Screen.Habits.route) { HabitsScreen(navController) }
         composable(Screen.Journal.route) { JournalScreen(navController) }
         composable(Screen.Analytics.route) { AnalyticsScreen(navController) }
-        composable(Screen.Coach.route) { CoachScreen(navController) }
-
+        composable(Screen.AICoach.route) { CoachScreen(navController) }
+        //other screens
         composable("mood_entry") { MoodEntryScreen(navController) }
+        composable("settings") { SettingsScreen(navController) }
     }
 }

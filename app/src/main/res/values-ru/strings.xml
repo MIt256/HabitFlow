@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HabitFlow</string>
+    <string name="coach_screen_nav_bar_name">Помощник</string>
+    <string name="habits_screen_nav_bar_name">Привычки</string>
+    <string name="jornal_screen_nav_bar_name">Журнал</string>
+    <string name="analytics_screen_nav_bar_name">Аналитика</string>
+    <string name="dashboard_screen_nav_bar_name">Главная</string>
+</resources>

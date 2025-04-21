@@ -8,7 +8,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 
 @Composable
 fun DashboardScreen(navController: NavController) {
@@ -23,8 +25,16 @@ fun DashboardScreen(navController: NavController) {
         }
     }
 }
-
+//todo
 @Composable
 fun MoodEntryScreen(navController: NavController) {
     Text("Экран записи настроения")
 }
+
+@Preview
+@Composable
+fun DashboardScreenPreview(){
+    DashboardScreen(rememberNavController())
+}
+
+
