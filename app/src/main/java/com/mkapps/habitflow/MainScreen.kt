@@ -30,7 +30,7 @@ fun MainScreen() {
                     navController.currentBackStackEntryAsState().value?.destination?.route
                 items.forEach { screen ->
                     NavigationBarItem(
-                        icon = { Icon(screen.icon, contentDescription = screen.title) },
+                        icon = { screen.icon?.let { Icon(it, contentDescription = screen.title) } },
                         label = { Text(screen.title) },
                         selected = currentRoute == screen.route,
                         onClick = {

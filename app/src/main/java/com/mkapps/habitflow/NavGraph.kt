@@ -2,6 +2,7 @@ package com.mkapps.habitflow
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -20,7 +21,10 @@ fun NavGraph(navController: NavHostController, modifier: Modifier = Modifier) {
         composable(Screen.Analytics.route) { AnalyticsScreen(navController) }
         composable(Screen.AICoach.route) { CoachScreen(navController) }
         //other screens
-        composable("mood_entry") { MoodEntryScreen(navController) }
-        composable("settings") { SettingsScreen(navController) }
+        composable(Screen.MoodEntry.route) { MoodEntryScreen(navController) }
+        composable(Screen.Settings.route) {
+            val viewModel: SettingsViewModel = hiltViewModel()
+            SettingsScreen(navController, viewModel)
+        }
     }
 }
