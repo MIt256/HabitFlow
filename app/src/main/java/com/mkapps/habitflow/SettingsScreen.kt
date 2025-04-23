@@ -24,7 +24,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
-import androidx.navigation.compose.rememberNavController
 
 @Composable
 fun SettingsScreen(
@@ -51,7 +50,10 @@ fun SettingsScreenPreviewContent(
             .fillMaxSize()
             .padding(16.dp)
     ) {
-        Text(stringResource(R.string.settings_screen_lable), style = MaterialTheme.typography.headlineSmall)
+        Text(
+            stringResource(R.string.settings_screen_lable),
+            style = MaterialTheme.typography.headlineSmall
+        )
 
         Spacer(modifier = Modifier.height(24.dp))
 
