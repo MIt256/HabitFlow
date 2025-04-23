@@ -19,6 +19,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -50,24 +51,23 @@ fun SettingsScreenPreviewContent(
             .fillMaxSize()
             .padding(16.dp)
     ) {
-        Text("Настройки", style = MaterialTheme.typography.headlineSmall)
+        Text(stringResource(R.string.settings_screen_lable), style = MaterialTheme.typography.headlineSmall)
 
         Spacer(modifier = Modifier.height(24.dp))
 
-        Text("Язык приложения:")
+        Text(stringResource(R.string.settings_languague_lable))
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            LanguageButton("Русский", selected = settings.language == "ru") {
-                onChangeLanguage("ru")
-            }
-            LanguageButton("English", selected = settings.language == "en") {
-                onChangeLanguage("en")
+            for (lang in AppLanguage.values()) {
+                LanguageButton(lang.stringValue, selected = settings.language == lang.code) {
+                    onChangeLanguage(lang.code)
+                }
             }
         }
 
         Spacer(modifier = Modifier.height(32.dp))
 
         Row(verticalAlignment = Alignment.CenterVertically) {
-            Text("Темная тема")
+            Text(stringResource(R.string.settings_theme_lable))
             Spacer(modifier = Modifier.width(8.dp))
             Switch(
                 checked = settings.darkTheme,

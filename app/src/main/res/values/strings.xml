@@ -6,4 +6,9 @@
     <string name="jornal_screen_nav_bar_name">Jornal</string>
     <string name="analytics_screen_nav_bar_name">Analytics</string>
     <string name="dashboard_screen_nav_bar_name">Dashboard</string>
+
+    //settings screen
+    <string name="settings_screen_lable">Settings</string>
+    <string name="settings_languague_lable">Application languague</string>
+    <string name="settings_theme_lable">Theme</string>
 </resources>

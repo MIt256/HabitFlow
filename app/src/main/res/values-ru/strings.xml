@@ -6,4 +6,7 @@
     <string name="jornal_screen_nav_bar_name">Журнал</string>
     <string name="analytics_screen_nav_bar_name">Аналитика</string>
     <string name="dashboard_screen_nav_bar_name">Главная</string>
+    <string name="settings_screen_lable">Настройки</string>
+    <string name="settings_languague_lable">Язык приложения</string>
+    <string name="settings_theme_lable">Тема</string>
 </resources>
