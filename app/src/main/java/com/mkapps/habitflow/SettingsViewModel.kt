@@ -1,8 +1,10 @@
 package com.mkapps.habitflow
 
+import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
@@ -17,13 +19,17 @@ class SettingsViewModel @Inject constructor(private val repo: SettingsRepository
         AppSettings("en", false)
     )
 
-    fun changeLanguage(code: String) {
-        viewModelScope.launch { repo.setLanguage(code) }
-    }
-
     fun toggleTheme() {
         viewModelScope.launch {
             repo.setDarkTheme(!settings.value.darkTheme)
+        }
+    }
+
+    fun changeLanguage(code: String, context: Context) {
+        viewModelScope.launch {
+            repo.setLanguage(code)
+            delay(100)//time to save
+            restartApp(context)
         }
     }
 }

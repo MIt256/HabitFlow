@@ -5,6 +5,7 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.*
 import androidx.datastore.preferences.preferencesDataStore
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
@@ -19,7 +20,7 @@ class SettingsDataStore(private val context: Context) {
     val settingsFlow: Flow<AppSettings> = context.dataStore.data
         .map { preferences ->
             AppSettings(
-                language = preferences[PreferencesKeys.LANGUAGE] ?: "ru",
+                language = preferences[PreferencesKeys.LANGUAGE] ?: "en",
                 darkTheme = preferences[PreferencesKeys.DARK_THEME] ?: false
             )
         }
@@ -35,5 +36,10 @@ class SettingsDataStore(private val context: Context) {
             val current = preferences[PreferencesKeys.DARK_THEME] ?: false
             preferences[PreferencesKeys.DARK_THEME] = !current
         }
+    }
+
+    suspend fun getLanguage(): String {
+        val prefs = context.dataStore.data.first()
+        return prefs[PreferencesKeys.LANGUAGE] ?: "en"
     }
 }

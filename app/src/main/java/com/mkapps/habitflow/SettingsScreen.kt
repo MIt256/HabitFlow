@@ -1,5 +1,6 @@
 package com.mkapps.habitflow
 
+import android.content.Context
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -19,6 +20,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -42,9 +44,11 @@ fun SettingsScreen(
 @Composable
 fun SettingsScreenPreviewContent(
     settings: AppSettings,
-    onChangeLanguage: (String) -> Unit,
+    onChangeLanguage: (String, Context) -> Unit,
     onToggleTheme: () -> Unit
 ) {
+    val context = LocalContext.current
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -59,9 +63,9 @@ fun SettingsScreenPreviewContent(
 
         Text(stringResource(R.string.settings_languague_lable))
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            for (lang in AppLanguage.values()) {
+            for (lang in AppLanguage.entries) {
                 LanguageButton(lang.stringValue, selected = settings.language == lang.code) {
-                    onChangeLanguage(lang.code)
+                    onChangeLanguage(lang.code, context)
                 }
             }
         }
@@ -78,7 +82,6 @@ fun SettingsScreenPreviewContent(
         }
     }
 }
-
 
 @Composable
 fun LanguageButton(
@@ -104,7 +107,7 @@ fun SettingsScreenPreview() {
 
     SettingsScreenPreviewContent(
         settings = fakeSettings,
-        onChangeLanguage = {},
+        onChangeLanguage = { _, _ -> },
         onToggleTheme = {}
     )
 }
