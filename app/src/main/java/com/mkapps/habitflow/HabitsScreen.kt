@@ -15,7 +15,9 @@ import androidx.navigation.NavController
 @Composable
 fun HabitsScreen(navController: NavController) {
     Column(
-        Modifier.fillMaxSize().padding(16.dp),
+        Modifier
+            .fillMaxSize()
+            .padding(16.dp),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {

@@ -14,11 +14,13 @@ import androidx.navigation.NavController
 @Composable
 fun CoachScreen(navController: NavController) {
     Column(
-        Modifier.fillMaxSize().padding(16.dp),
+        Modifier
+            .fillMaxSize()
+            .padding(16.dp),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text("AI Коуч")
-        Text("Здесь будет чат с ассистентом")
+                Text("Здесь будет чат с ассистентом")
     }
 }

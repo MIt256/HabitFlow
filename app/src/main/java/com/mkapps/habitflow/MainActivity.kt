@@ -3,18 +3,16 @@ package com.mkapps.habitflow
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.preference.PreferenceManager
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.tooling.preview.Preview
 import com.mkapps.habitflow.ui.theme.HabitFlowTheme
 import dagger.hilt.android.AndroidEntryPoint
-import androidx.compose.runtime.getValue
-import com.mkapps.habitflow.util.LocaleUtils
 import kotlinx.coroutines.runBlocking
 
 @AndroidEntryPoint

@@ -1,9 +1,8 @@
-package com.mkapps.habitflow.util
+package com.mkapps.habitflow
 
 import android.content.Context
 import android.content.res.Configuration
-import android.os.Build
-import java.util.*
+import java.util.Locale
 
 object LocaleUtils {
     fun applyLocale(base: Context, langCode: String): Context {
@@ -14,12 +13,6 @@ object LocaleUtils {
             setLocale(locale)
         }
 
-        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            base.createConfigurationContext(config)
-        } else {
-            @Suppress("DEPRECATION")
-            base.resources.updateConfiguration(config, base.resources.displayMetrics)
-            base
-        }
+        return base.createConfigurationContext(config)
     }
 }

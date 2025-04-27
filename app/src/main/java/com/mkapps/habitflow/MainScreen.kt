@@ -53,6 +53,6 @@ fun MainScreen() {
 
 @Preview
 @Composable
-private fun MainScreenPreview(){
+private fun MainScreenPreview() {
     MainScreen()
 }
