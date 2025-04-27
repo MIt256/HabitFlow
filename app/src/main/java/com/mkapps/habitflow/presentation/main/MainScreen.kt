@@ -1,4 +1,4 @@
-package com.mkapps.habitflow
+package com.mkapps.habitflow.presentation.main
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Icon
@@ -11,6 +11,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.mkapps.habitflow.presentation.navigation.NavGraph
+import com.mkapps.habitflow.presentation.navigation.Screen
 
 @Composable
 fun MainScreen() {

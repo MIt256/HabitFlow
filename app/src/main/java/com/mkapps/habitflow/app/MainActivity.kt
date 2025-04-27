@@ -1,4 +1,4 @@
-package com.mkapps.habitflow
+package com.mkapps.habitflow.app
 
 import android.content.Context
 import android.content.Intent
@@ -11,7 +11,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.tooling.preview.Preview
-import com.mkapps.habitflow.ui.theme.HabitFlowTheme
+import com.mkapps.habitflow.presentation.main.MainScreen
+import com.mkapps.habitflow.data.settings.SettingsDataStore
+import com.mkapps.habitflow.presentation.settings.SettingsViewModel
+import com.mkapps.habitflow.core.util.LocaleUtil
+import com.mkapps.habitflow.presentation.theme.HabitFlowTheme
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.runBlocking
 
@@ -24,7 +28,7 @@ class MainActivity : ComponentActivity() {
         val dataStore = SettingsDataStore(newBase)
         val contextWithLang = runBlocking {
             val lang = dataStore.getLanguage()
-            LocaleUtils.applyLocale(newBase, lang)
+            LocaleUtil.applyLocale(newBase, lang)
         }
         super.attachBaseContext(contextWithLang)
     }

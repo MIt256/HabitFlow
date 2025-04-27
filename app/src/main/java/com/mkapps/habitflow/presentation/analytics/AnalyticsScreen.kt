@@ -1,4 +1,4 @@
-package com.mkapps.habitflow
+package com.mkapps.habitflow.presentation.analytics
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -12,15 +12,13 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 
 @Composable
-fun CoachScreen(navController: NavController) {
+fun AnalyticsScreen(navController: NavController) {
     Column(
-        Modifier
-            .fillMaxSize()
-            .padding(16.dp),
+        Modifier.fillMaxSize().padding(16.dp),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("AI Коуч")
-                Text("Здесь будет чат с ассистентом")
+        Text("Аналитика")
+        Text("Графики и статистика будут здесь")
     }
 }

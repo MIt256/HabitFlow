@@ -1,8 +1,11 @@
-package com.mkapps.habitflow
+package com.mkapps.habitflow.presentation.settings
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.mkapps.habitflow.app.restartApp
+import com.mkapps.habitflow.domain.settings.AppSettings
+import com.mkapps.habitflow.domain.settings.SettingsRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.SharingStarted

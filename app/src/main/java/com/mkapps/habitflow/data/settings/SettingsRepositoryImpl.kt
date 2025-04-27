@@ -1,6 +1,8 @@
-package com.mkapps.habitflow
+package com.mkapps.habitflow.data.settings
 
 import android.content.Context
+import com.mkapps.habitflow.domain.settings.AppSettings
+import com.mkapps.habitflow.domain.settings.SettingsRepository
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject

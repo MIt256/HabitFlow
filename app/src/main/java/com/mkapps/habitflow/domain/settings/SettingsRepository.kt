@@ -1,4 +1,4 @@
-package com.mkapps.habitflow
+package com.mkapps.habitflow.domain.settings
 
 import kotlinx.coroutines.flow.Flow
 

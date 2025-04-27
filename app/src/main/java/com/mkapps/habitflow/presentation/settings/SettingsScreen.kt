@@ -1,4 +1,4 @@
-package com.mkapps.habitflow
+package com.mkapps.habitflow.presentation.settings
 
 import android.content.Context
 import androidx.compose.foundation.layout.Arrangement
@@ -26,6 +26,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import com.mkapps.habitflow.R
+import com.mkapps.habitflow.domain.settings.AppLanguage
+import com.mkapps.habitflow.domain.settings.AppSettings
 
 @Composable
 fun SettingsScreen(

@@ -1,4 +1,4 @@
-package com.mkapps.habitflow.ui.theme
+package com.mkapps.habitflow.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 

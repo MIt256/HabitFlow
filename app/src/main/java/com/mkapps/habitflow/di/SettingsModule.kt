@@ -1,8 +1,8 @@
 package com.mkapps.habitflow.di
 
 import android.content.Context
-import com.mkapps.habitflow.SettingsRepository
-import com.mkapps.habitflow.SettingsRepositoryImpl
+import com.mkapps.habitflow.domain.settings.SettingsRepository
+import com.mkapps.habitflow.data.settings.SettingsRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

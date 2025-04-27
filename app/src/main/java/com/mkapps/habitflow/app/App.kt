@@ -1,4 +1,4 @@
-package com.mkapps.habitflow
+package com.mkapps.habitflow.app
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
