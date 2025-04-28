@@ -11,4 +11,18 @@
     <string name="settings_screen_lable">Settings</string>
     <string name="settings_languague_lable">Application languague</string>
     <string name="settings_theme_lable">Theme</string>
+
+    //dashboard screen
+    <string name="dashboard_screen_hello_lable">Hi, how are you feeling?</string>
+    <string name="dashboard_screen_add_mood_button">Add mood</string>
+    <string name="dashboard_screen_my_habits_button">My habits</string>
+    <string name="dashboard_screen_mood_history_button">Mood history</string>
+    <string name="dashboard_screen_todays_mood_lable">Today\'s mood</string>
+    <string name="mood_sad">Sad</string>
+    <string name="mood_angry">Angry</string>
+    <string name="mood_neutral">Neutral</string>
+    <string name="mood_happy">Happy</string>
+    <string name="mood_excited">Excited</string>
+    //mood
+
 </resources>

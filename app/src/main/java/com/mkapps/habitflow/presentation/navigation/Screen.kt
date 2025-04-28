@@ -16,5 +16,5 @@ sealed class Screen(val route: String, val title: String, val icon: ImageVector?
     object AICoach : Screen("aicoach", "ИИКоуч", Icons.Default.Face)
 
     object Settings : Screen("settings", "Settings")
-    object MoodEntry : Screen("mood_entry", "Settings")
+    object MoodEntry : Screen("mood_entry", "Mood entry")
 }

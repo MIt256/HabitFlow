@@ -11,7 +11,6 @@ import com.mkapps.habitflow.presentation.coach.CoachScreen
 import com.mkapps.habitflow.presentation.dashboard.DashboardScreen
 import com.mkapps.habitflow.presentation.habits.HabitsScreen
 import com.mkapps.habitflow.presentation.jornal.JournalScreen
-import com.mkapps.habitflow.presentation.dashboard.MoodEntryScreen
 import com.mkapps.habitflow.presentation.settings.SettingsScreen
 import com.mkapps.habitflow.presentation.settings.SettingsViewModel
 
@@ -29,7 +28,7 @@ fun NavGraph(navController: NavHostController, modifier: Modifier = Modifier) {
         composable(Screen.Analytics.route) { AnalyticsScreen(navController) }
         composable(Screen.AICoach.route) { CoachScreen(navController) }
         //other screens
-        composable(Screen.MoodEntry.route) { MoodEntryScreen(navController) }
+        //composable(Screen.MoodEntry.route) { MoodEntryScreen(navController) }
         composable(Screen.Settings.route) {
             val viewModel: SettingsViewModel = hiltViewModel()
             SettingsScreen(navController, viewModel)

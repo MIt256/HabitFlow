@@ -9,4 +9,14 @@
     <string name="settings_screen_lable">Настройки</string>
     <string name="settings_languague_lable">Язык приложения</string>
     <string name="settings_theme_lable">Тема</string>
+    <string name="dashboard_screen_hello_lable">Привет, как настроение?</string>
+    <string name="dashboard_screen_add_mood_button">Добавить настроение</string>
+    <string name="dashboard_screen_my_habits_button">Мои привычки</string>
+    <string name="dashboard_screen_mood_history_button">История настроений</string>
+    <string name="dashboard_screen_todays_mood_lable">Настроение сегодня</string>
+    <string name="mood_sad">Грусть</string>
+    <string name="mood_angry">Злость</string>
+    <string name="mood_neutral">Нейтрально</string>
+    <string name="mood_happy">Счастье</string>
+    <string name="mood_excited">В восторге</string>
 </resources>
