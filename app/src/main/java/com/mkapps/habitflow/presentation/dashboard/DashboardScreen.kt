@@ -39,17 +39,23 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.mkapps.habitflow.R
-import com.mkapps.habitflow.presentation.dashboard.Mood.ANGRY
-import com.mkapps.habitflow.presentation.dashboard.Mood.EXCITED
-import com.mkapps.habitflow.presentation.dashboard.Mood.HAPPY
-import com.mkapps.habitflow.presentation.dashboard.Mood.NEUTRAL
-import com.mkapps.habitflow.presentation.dashboard.Mood.SAD
+import com.mkapps.habitflow.domain.mood.model.Mood
+import com.mkapps.habitflow.domain.mood.model.Mood.ANGRY
+import com.mkapps.habitflow.domain.mood.model.Mood.EXCITED
+import com.mkapps.habitflow.domain.mood.model.Mood.HAPPY
+import com.mkapps.habitflow.domain.mood.model.Mood.NEUTRAL
+import com.mkapps.habitflow.domain.mood.model.Mood.SAD
+import com.mkapps.habitflow.presentation.viewmodel.MoodViewModel
 
 @Composable
-fun DashboardScreen(navController: NavController) {
+fun DashboardScreen(
+    navController: NavController,
+    moodViewModel: MoodViewModel = hiltViewModel()
+) {
 
     var selectedMood by remember { mutableStateOf<Mood?>(null) }
 
@@ -81,6 +87,7 @@ fun DashboardScreen(navController: NavController) {
 
             if (selectedMood != null) {
                 TodayMoodCard(selectedMood)
+                moodViewModel.saveMood(selectedMood!!,note = null)
             }
 
             Spacer(modifier = Modifier.height(16.dp))
@@ -94,7 +101,7 @@ fun DashboardScreen(navController: NavController) {
                 icon = Icons.Default.Favorite
             ) {
                 //todo not impl
-                navController.navigate("mood_entry")
+                //navController.navigate("mood_entry")
             }
 
             Spacer(modifier = Modifier.height(16.dp))

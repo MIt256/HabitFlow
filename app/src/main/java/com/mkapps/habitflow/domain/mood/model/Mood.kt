@@ -1,4 +1,4 @@
-package com.mkapps.habitflow.presentation.dashboard
+package com.mkapps.habitflow.domain.mood.model
 
 enum class Mood {
     SAD, ANGRY, NEUTRAL, HAPPY, EXCITED;
