@@ -87,7 +87,7 @@ fun DashboardScreen(
 
             if (selectedMood != null) {
                 TodayMoodCard(selectedMood)
-                moodViewModel.saveMood(selectedMood!!,note = null)
+                moodViewModel.saveMood(selectedMood!!, note = null)
             }
 
             Spacer(modifier = Modifier.height(16.dp))
